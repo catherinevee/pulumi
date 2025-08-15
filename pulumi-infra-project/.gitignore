@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Pulumi state files
+*.json
+*.yaml
+*.bak
+Pulumi.*.yaml
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build output
+dist/
+build/
+
+# Test coverage
+coverage/
+
+# Environment files
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.pyc
+
+# PowerShell history
+*.pshistory
+
+# Other
+*.swp
+*.swo

@@ -1,0 +1,27 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Explicitly declare text files
+*.ts text
+*.js text
+*.json text
+*.md text
+*.yaml text
+*.yml text
+*.ps1 text
+*.py text
+
+# Treat images and binaries as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.exe binary
+*.dll binary
+*.so binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.tgz binary
+*.pdf binary
