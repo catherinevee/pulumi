@@ -41,12 +41,20 @@ pulumi/
 │   ├── common_tasks.ps1
 │   └── README.md
 ├── aws/
+│   ├── ecs.ts
+│   ├── index.ts
+│   ├── s3.ts
+│   └── vpc.ts
 ├── azure/
+│   ├── aks.ts
+│   ├── index.ts
+│   └── network.ts
 ├── components/
 │   ├── logging/
 │   ├── README.md
 │   ├── shared/
-│   │   └── shared_module.ts
+│   │   ├── shared_module.ts
+│   │   └── unified_cluster.go
 │   ├── tagging/
 │   └── unified_cluster.go
 ├── environments/
@@ -54,11 +62,48 @@ pulumi/
 │   ├── prod/
 │   └── README.md
 ├── esc/
+│   └── environments.ts
 ├── examples/
 │   ├── python/
+│   │   ├── aws/
+│   │   │   ├── aws_dynamodb_example.py
+│   │   │   ├── aws_iam_user_example.py
+│   │   │   ├── aws_kms_key_example.py
+│   │   │   ├── aws_s3_example.py
+│   │   │   └── aws_vpc_example.py
+│   │   ├── azure/
+│   │   │   ├── azure_ad_user_example.py
+│   │   │   ├── azure_key_vault_example.py
+│   │   │   ├── azure_storage_example.py
+│   │   │   ├── azure_vnet_advanced_example.py
+│   │   │   └── azure_vnet_example.py
+│   │   ├── digitalocean/
+│   │   │   ├── digitalocean_droplet_example.py
+│   │   │   ├── digitalocean_firewall_example.py
+│   │   │   ├── digitalocean_loadbalancer_example.py
+│   │   │   ├── digitalocean_project_member_example.py
+│   │   │   └── digitalocean_spaces_example.py
+│   │   ├── gcp/
+│   │   │   ├── gcp_cloud_nat_example.py
+│   │   │   ├── gcp_kms_keyring_example.py
+│   │   │   ├── gcp_pubsub_example.py
+│   │   │   ├── gcp_service_account_example.py
+│   │   │   └── gcp_storage_example.py
 │   ├── README.md
 │   └── typescript/
+│       ├── digitalocean_droplet_example.ts
+│       ├── digitalocean_firewall_example.ts
+│       ├── digitalocean_loadbalancer_example.ts
+│       ├── digitalocean_project_example.ts
+│       ├── digitalocean_setup.md
+│       ├── digitalocean_spaces_example.ts
+│       ├── Pulumi.dev.yaml
+│       ├── Pulumi.prod.yaml
+│       └── Pulumi.staging.yaml
 ├── gcp/
+│   ├── gke.ts
+│   ├── index.ts
+│   └── network.ts
 ├── policies/
 │   ├── ACCESS_REVIEW.md
 │   ├── BACKUP_RECOVERY.md
@@ -81,14 +126,44 @@ pulumi/
 │   └── VULNERABILITY_SCANNING_EXAMPLE.md
 ├── providers/
 │   ├── aws/
+│   │   ├── compute/
+│   │   ├── ecs.ts
+│   │   ├── iam/
+│   │   ├── index.ts
+│   │   ├── networking/
+│   │   ├── rds_backup_example.ts
+│   │   ├── s3.ts
+│   │   ├── security/
+│   │   └── vpc.ts
 │   ├── azure/
+│   │   ├── aks.ts
+│   │   ├── compute/
+│   │   ├── iam/
+│   │   ├── index.ts
+│   │   ├── network.ts
+│   │   ├── networking/
+│   │   └── security/
 │   ├── digitalocean/
+│   │   ├── compute/
+│   │   ├── iam/
+│   │   ├── networking/
+│   │   └── security/
 │   ├── gcp/
+│   │   ├── compute/
+│   │   ├── gke.ts
+│   │   ├── iam/
+│   │   ├── index.ts
+│   │   ├── network.ts
+│   │   ├── networking/
+│   │   └── security/
 │   └── README.md
 ├── tests/
 │   ├── aws/
+│   │   ├── test_network_stack.ts
+│   │   └── test_s3_bucket_encryption.py
 │   ├── azure/
 │   ├── digitalocean/
+│   │   └── test_droplet.py
 │   ├── gcp/
 │   ├── README.md
 │   ├── test_network_stack.ts
