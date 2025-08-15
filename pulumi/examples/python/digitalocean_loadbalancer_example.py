@@ -11,11 +11,11 @@ import pulumi_digitalocean as do
 
 lb = do.LoadBalancer('example-lb',
     region='nyc3',
-    forwarding_rules=[do.LoadBalancerForwardingRuleArgs(
-        entry_protocol='http',
-        entry_port=80,
-        target_protocol='http',
-        target_port=80
-    )]
+  forwarding_rules=[{
+    "entry_protocol": "http",
+    "entry_port": 80,
+    "target_protocol": "http",
+    "target_port": 80
+  }]
 )
-pulumi.export('loadbalancer_id', lb.id)
+pulumi.export("load_balancer_id", lb.id)

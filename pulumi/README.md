@@ -2,7 +2,7 @@
 # Pulumi Infrastructure Project
 
 ## Overview
-This project manages cloud infrastructure across AWS, Azure, and GCP using Pulumi. It supports multiple environments and enforces compliance and tagging policies.
+This project manages cloud infrastructure across AWS, Azure, GCP, and DigitalOcean using Pulumi. It supports multiple environments and enforces compliance and tagging policies.
 
 ## Directory Structure
 
@@ -82,6 +82,7 @@ pulumi/
 │   │   │   ├── digitalocean_firewall_example.py
 │   │   │   ├── digitalocean_loadbalancer_example.py
 │   │   │   ├── digitalocean_project_member_example.py
+│   │   │   ├── digitalocean_project_example.py
 │   │   │   └── digitalocean_spaces_example.py
 │   │   ├── gcp/
 │   │   │   ├── gcp_cloud_nat_example.py
@@ -90,16 +91,7 @@ pulumi/
 │   │   │   ├── gcp_service_account_example.py
 │   │   │   └── gcp_storage_example.py
 │   ├── README.md
-│   └── typescript/
-│       ├── digitalocean_droplet_example.ts
-│       ├── digitalocean_firewall_example.ts
-│       ├── digitalocean_loadbalancer_example.ts
-│       ├── digitalocean_project_example.ts
-│       ├── digitalocean_setup.md
-│       ├── digitalocean_spaces_example.ts
-│       ├── Pulumi.dev.yaml
-│       ├── Pulumi.prod.yaml
-│       └── Pulumi.staging.yaml
+│   # All examples are now in Python
 ├── gcp/
 │   ├── gke.ts
 │   ├── index.ts
@@ -109,7 +101,7 @@ pulumi/
 │   ├── BACKUP_RECOVERY.md
 │   ├── compliance_policy.ts
 │   ├── DISASTER_RECOVERY.md
-│   ├── DISASTER_RECOVERY_EXAMPLE.md
+│   # No typescript examples
 │   ├── INCIDENT_RESPONSE.md
 │   ├── INCIDENT_RESPONSE_EXAMPLE.md
 │   ├── INCIDENT_RESPONSE_PLAYBOOK.md
@@ -179,11 +171,18 @@ pulumi/
   npm install
   ```
 
+
 ## Usage
 - Preview changes: `pulumi preview`
 - Deploy: `pulumi up`
 - Destroy: `pulumi destroy`
 - Use automation scripts: `automation/common_tasks.ps1`
+
+## Supported Providers
+- AWS
+- Azure
+- GCP
+- DigitalOcean
 
 ## Testing
 See `tests/README.md` for details.

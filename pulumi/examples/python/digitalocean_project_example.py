@@ -1,4 +1,3 @@
-
 # Pulumi DigitalOcean Project Example (Python)
 import pulumi
 import pulumi_digitalocean as digitalocean

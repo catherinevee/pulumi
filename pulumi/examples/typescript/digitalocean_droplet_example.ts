@@ -1,12 +1,14 @@
-// Pulumi DigitalOcean Droplet Example (TypeScript)
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
 
-const droplet = new digitalocean.Droplet("example-droplet", {
-    image: "ubuntu-22-04-x64",
-    region: "nyc3",
-    size: "s-1vcpu-1gb"
-});
+# Pulumi DigitalOcean Droplet Example (Python)
+import pulumi
+import pulumi_digitalocean as digitalocean
 
-export const dropletId = droplet.id;
-export const dropletIp = droplet.ipv4Address;
+example_droplet = digitalocean.Droplet(
+    "example-droplet",
+    image="ubuntu-22-04-x64",
+    region="nyc3",
+    size="s-1vcpu-1gb"
+)
+
+pulumi.export("droplet_id", example_droplet.id)
+pulumi.export("droplet_ip", example_droplet.ipv4_address)

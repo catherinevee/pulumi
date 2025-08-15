@@ -1,19 +1,21 @@
-// Pulumi DigitalOcean Firewall Example (TypeScript)
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
 
-const firewall = new digitalocean.Firewall("example-firewall", {
-    dropletIds: [],
-    inboundRules: [{
-        protocol: "tcp",
-        portRange: "22",
-        sourceAddresses: ["0.0.0.0/0"]
+# Pulumi DigitalOcean Firewall Example (Python)
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example_firewall = digitalocean.Firewall(
+    "example-firewall",
+    droplet_ids=[],
+    inbound_rules=[{
+        "protocol": "tcp",
+        "port_range": "22",
+        "source_addresses": ["0.0.0.0/0"]
     }],
-    outboundRules: [{
-        protocol: "tcp",
-        portRange: "all",
-        destinationAddresses: ["0.0.0.0/0"]
+    outbound_rules=[{
+        "protocol": "tcp",
+        "port_range": "all",
+        "destination_addresses": ["0.0.0.0/0"]
     }]
-});
+)
 
-export const firewallId = firewall.id;
+pulumi.export("firewall_id", example_firewall.id)

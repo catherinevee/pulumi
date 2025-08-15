@@ -7,9 +7,14 @@ Usage:
   pulumi up
 """
 import pulumi
-import pulumi_digitalocean as do
+import pulumi_digitalocean as digitalocean
 
 bucket = do.SpacesBucket('example-space',
     region='nyc3'
 )
-pulumi.export('bucket_name', bucket.name)
+example_space = digitalocean.SpacesBucket(
+  "example-space",
+  region="nyc3"
+)
+
+pulumi.export("bucket_name", example_space.name)
