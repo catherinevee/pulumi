@@ -8,3 +8,8 @@ This folder contains compliance, security, and tagging policies for infrastructu
 - Add new policy files to extend or customize enforcement
 
 Keep policies up to date to ensure best practices and compliance.
+
+## Additional Information
+This section can include more details about compliance and security policies.
+
+Keep policies up to date to ensure best practices and compliance.
